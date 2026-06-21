@@ -1,10 +1,12 @@
-//A ReadStream is a stream that allows you to read data from a resource. Node.js provides ReadStream implementations for different use cases, 
-// such as reading from files (fs.ReadStream) or standard input (process.stdin).
+// streams.js
+// Purpose: demo of Node.js file streams (readStream and writeStream) and piping large files efficiently.
+// How to run: place a large file at `./docs/HugeFile.txt` then run `node streams.js`.
+// Notes: Using streams avoids loading entire files into memory. Two methods shown: manual write and `pipe()`.
 
 const fs = require('fs');
 
 // Read Stream
-// to aviod the toString funct use this {encoding: 'utf8'} on imporing file
+// to avoid calling toString() use {encoding: 'utf8'} when creating the stream
 const readStream = fs.createReadStream('./docs/HugeFile.txt', {encoding: 'utf8'})
  
 readStream.on('data',(buffer) =>{
@@ -15,11 +17,11 @@ readStream.on('data',(buffer) =>{
 // Write Stream
 const writestream = fs.createWriteStream('./docs/copyHugeFile.txt')
 
-// Mehtod 1
+// Method 1: handle chunks manually
 readStream.on('data',(buffer) =>{
     writestream.write('\nNew Buffer\n');
     writestream.write(buffer);
 })
 
-// Mehtod 2
+// Method 2: use pipe (recommended for straightforward copying)
 readStream.pipe(writestream);

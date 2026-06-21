@@ -1,3 +1,8 @@
+// Server.js
+// Purpose: minimal HTTP server example using Node's built-in `http` module.
+// How to run: `node Server.js` and open http://localhost:3000 in your browser.
+// Notes: Useful for learning basic request/response handling without Express.
+
 const http = require('http');
 
 const server = http.createServer((req, res) =>{

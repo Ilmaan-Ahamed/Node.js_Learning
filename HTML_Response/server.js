@@ -1,3 +1,9 @@
+// HTML_Response/server.js
+// Purpose: tiny static router that serves files in the `HTML_Response` folder.
+// How to run: `node server.js` from the `HTML_Response` folder and visit http://localhost:3000
+// Routes: `/` -> index.html, `/joinus` -> join.html, `/about` -> about.html. Unknown routes -> notfound.html.
+// Notes: This file uses only built-in modules (and lodash for a demo random number). Keep HTML files in same folder.
+
 const http = require('http');
 const fs = require('fs');
 const path = require('path');

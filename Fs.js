@@ -1,4 +1,7 @@
-// Fs - File System 
+// Fs.js
+// Purpose: demonstrates basic Node.js file system operations (create folder, write/read/delete files).
+// How to run: `node Fs.js` from the project root. It will operate on a `./docs` folder in this project.
+// Notes: This is an educational script — avoid running in production directories. It uses callback-based fs APIs.
 
 const fs = require('fs');
 

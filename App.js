@@ -1,3 +1,8 @@
+// App.js
+// Purpose: small Express app demonstrating middleware and serving static HTML files using `res.sendFile()`.
+// How to run: install dependencies then `node App.js` or `npx nodemon App.js`.
+// Notes: Requires `express` and `morgan` packages. Example routes: '/', '/join', '/joinus' (redirect), '/about'.
+
 const exp = require('express');
 
 const morgan = require('morgan')
@@ -16,6 +21,7 @@ app.use((req, res, next)=>{
 })
 
 app.use(morgan('dev'))
+
 // 
 app.get('/', (req, res)=>{
     res.sendFile('./HTML_Response/index.html', {root: __dirname});
@@ -43,6 +49,6 @@ app.use((req, res)=>{
 })
 
 
-// Broweer -> Request -> Server -> Response -> Browser
+// Browser -> Request -> Server -> Response -> Browser
 
-//// Broweer -> Request -> Server {Middleware} -> Response -> Browser
+//// Browser -> Request -> Server {Middleware} -> Response -> Browser

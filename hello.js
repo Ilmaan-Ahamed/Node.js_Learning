@@ -1,3 +1,8 @@
+// hello.js
+// Purpose: small examples demonstrating timers, global object, and module-level variables.
+// How to run: `node hello.js` — it prints a few runtime values and shows setInterval / setTimeout usage.
+// Notes: This file is for learning Node.js runtime features (global, __dirname, __filename).
+
 const hello = (hname) =>{
     console.log(`Hello, ${hname}!`);
 }
