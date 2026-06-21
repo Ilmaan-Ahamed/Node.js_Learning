@@ -1,0 +1,27 @@
+{
+  "name": "node.js_learning",
+  "version": "1.0.0",
+  "description": "This is Node.js backend",
+  "homepage": "https://github.com/Ilmaan-Ahamed/Node.js_Learning#readme",
+  "bugs": {
+    "url": "https://github.com/Ilmaan-Ahamed/Node.js_Learning/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ilmaan-Ahamed/Node.js_Learning.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "data.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "lodash": "^4.18.1"
+  }
+}

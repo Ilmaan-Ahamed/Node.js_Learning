@@ -1,0 +1,50 @@
+# Node.js
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Runtime data
+.pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache
+.npm
+
+# Build output
+dist/
+build/
+coverage/
+.nyc_output/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Misc
+.DS_Store
+Thumbs.db
+.cache/
+.parcel-cache/
+.eslintcache
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Package archives
+*.tgz
+
+# Ignore system files
+.DS_Store
