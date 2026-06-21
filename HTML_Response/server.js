@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const _ = require('lodash');
 
 const server = http.createServer((req, res) =>{
     
@@ -19,7 +20,7 @@ const server = http.createServer((req, res) =>{
         res.setHeader('Location', '/');
         res.end();
     }
-    else if (req.url == '/join' ) {
+    else if (req.url == '/joinus' ) {
         routePath = path.join(routePath, 'join.html');
         res.statusCode = 200;
     }
@@ -32,7 +33,7 @@ const server = http.createServer((req, res) =>{
         routePath = path.join(routePath, 'notfound.html');
         res.statusCode = 404;
     }
-    
+
 // 301 permernat Re Directions 
 // 302 temporty Re Directions
 // 200 succsess, 201 created 
@@ -57,4 +58,5 @@ const server = http.createServer((req, res) =>{
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, 'localhost', () => {
     console.log("Server is Listening on " + PORT)
+    console.log(_.random(1, 1000));
 });
